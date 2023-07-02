@@ -143,6 +143,54 @@ class Video extends Multimedia implements PlayerInterface{
     }
 }
 
+class Immagine extends Multimedia implements PlayerInterface {
+    private int luminosita;
+
+    public Immagine(String titolo, int luminosita){
+        super(0, titolo);
+        this.luminosita = luminosita;
+    }
+
+    public int getLuminosita(){
+        return luminosita;
+    }
+
+    public void setLuminosita(int luminosita){
+        this.luminosita = luminosita;
+    }
+
+    @Override
+    public int abassaVolume(int valore) {
+        return 0;
+    }
+
+    @Override
+    public int alzaVolume(int valore) {
+        return 0;
+    }
+
+    @Override
+    public int abassaLuminosita(int valore) {
+        luminosita -= valore;
+        if (luminosita < 0){
+            luminosita = 0;
+        }
+        return luminosita;
+    }
+
+    @Override
+    public int alzaLuminosita(int valore) {
+        luminosita += valore;
+        return luminosita;
+    }
+
+    public void show(){
+        System.out.println("Mostra l'immagine " + getTitolo());
+        String asterischi = "*".repeat(luminosita);
+        System.out.println(getTitolo() + " " + asterischi);
+    }
+}
+
 
 
 
