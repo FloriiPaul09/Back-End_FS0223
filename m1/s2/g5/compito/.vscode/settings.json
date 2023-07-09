@@ -1,0 +1,14 @@
+{
+    "java.project.sourcePaths": ["src"],
+    "java.project.outputPath": "bin",
+    "java.project.referencedLibraries": [
+        "lib/**/*.jar",
+        "c:\\Program Files\\Java\\commons-io-2.13.0\\commons-io-2.13.0.jar",
+        "c:\\Program Files\\Java\\commons-io-2.13.0\\commons-io-2.13.0-javadoc.jar",
+        "c:\\Program Files\\Java\\commons-io-2.13.0\\commons-io-2.13.0-sources.jar",
+        "c:\\Program Files\\Java\\commons-io-2.13.0\\commons-io-2.13.0-tests.jar",
+        "c:\\Program Files\\Java\\commons-io-2.13.0\\commons-io-2.13.0-test-sources.jar",
+        "c:\\Program Files\\Java\\slf4j.jar"
+    ],
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m -Xlog:disable"
+}
