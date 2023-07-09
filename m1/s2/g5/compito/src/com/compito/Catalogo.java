@@ -10,7 +10,6 @@ import java.util.stream.Collectors;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.IOExceptionList;
 
 public class Catalogo {
     private static final Logger logger = LoggerFactory.getLogger(Catalogo.class);
@@ -32,6 +31,9 @@ public class Catalogo {
 
     public void delete(String isbn){
         ElemLetteratura removeElem = archive.remove(isbn);
+        if(removeElem != null){
+            logger.info("Elemento rimosso", removeElem.getIsbn(), removeElem.getYearPub());
+        }
     }
 
     public ElemLetteratura searchIsbn(String isbn){
@@ -39,7 +41,7 @@ public class Catalogo {
     }
 
     public List<ElemLetteratura> searchYear(Integer yearPub){
-        return archive.values().stream().filter(e -> yearPub.equals(e.getYearPub)).collect(Collectors.toList());
+        return archive.values().stream().filter(e -> yearPub.equals(e.getYearPub())).collect(Collectors.toList());
     }
 
     public List<Book> searchAuth(String auth){
@@ -51,7 +53,7 @@ public class Catalogo {
         String fileHello = "";
 
         for (ElemLetteratura elem : archive.values()){
-            if(fileHello.lenght() != 0){
+            if(fileHello.length() != 0){
                 fileHello += "§";
             }
             if(elem instanceof Book){
