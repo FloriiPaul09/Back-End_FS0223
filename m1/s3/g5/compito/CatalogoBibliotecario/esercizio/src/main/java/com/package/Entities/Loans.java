@@ -26,4 +26,35 @@ public class Loans {
 
     @Column(name = "loan_returned")
     private LocalDate loanReturned;
+
+
+    //Constructor
+    public Loans(){}
+
+    //Start of loan methods
+    public LocalDate getLoanStart(){
+        return loanStart;
+    }
+
+    public void setLoanStart(LocalDate loanStart){
+        this.loanStart = loanStart;
+    }
+
+    //End of loan methods
+    public LocalDate getLoanEnd(){
+        return loanEnd;
+    }
+
+    public void setLoanEnd(LocalDate loanEnd){
+        this.loanEnd = loanEnd;
+    }
+
+    //Loan returned methods
+    public LocalDate getLoanReturned(){
+        return loanReturned;
+    }
+
+    public void setLoanReturned(LocalDate loanReturned){
+        this.loanReturned = loanReturned;
+    }
 }
