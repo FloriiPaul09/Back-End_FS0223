@@ -54,7 +54,7 @@ public class Catalogo {
     }
 
     //Year of publication methods
-    public Integer getPublicationYear(){
+    public Integer getPublicationYear(Integer publicationYear){
         return publicationYear;
     }
 
@@ -63,7 +63,7 @@ public class Catalogo {
     }
 
     //Number of pages methods
-    public Integer getNumPages(){
+    public Integer getNumPages(Integer numPages){
         return numPages;
     }
 
