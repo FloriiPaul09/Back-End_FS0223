@@ -17,7 +17,7 @@ public class User {
     private String surname;
 
     @Column(name = "birth_date")
-    private localDate birthDate;
+    private LocalDate birthDate;
 
     @Column(name = "card_number", unique = true)
     private Integer cardNumber;
