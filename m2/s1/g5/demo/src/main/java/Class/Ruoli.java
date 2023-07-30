@@ -6,29 +6,20 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import lombok.Data;
+import javax.persistence.Table;
 
+import lombok.Data;
 
 @Entity
 @Data
-
-public class Postazione {
+@Table(name = "ruoli")
+public class Ruoli {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Long id;
 	
-	protected String descrizione;
-
 	@Enumerated(EnumType.STRING)
-	protected Enum Tipo;
-
-	protected Integer occupanti;
-	
-	@ManyToOne
-	protected Edificio edificio;
-	
-	
+	protected TipoRuolo ruolo;
 	
 }
